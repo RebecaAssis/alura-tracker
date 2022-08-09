@@ -1,29 +1,32 @@
 <template>
 	<div class="is-flex is-align-items-center is-justify-content-space-between">
 		<CronometroTarefa :tempoEmSegundos="tempoEmSegundos" />
-		<button class="button" @click="iniciar" :disabled="cronometroRodando">
+		<ButtonDefault @clicado="iniciar" icone="fas fa-play" texto="play" :desabilitado="cronometroRodando"/>
+		<ButtonDefault @clicado="finalizar" icone="fas fa-stop" texto="stop" :desabilitado="!cronometroRodando" />
+		<!-- <button class="button" @click="iniciar" :disabled="cronometroRodando">
 			<span class="icon">
 				<i class="fas fa-play"></i>
 			</span>
 			<span>play</span>
-		</button>
-		<button class="button" @click="finalizar" :disabled="!cronometroRodando">
+		</button> -->
+		<!-- <button class="button" @click="finalizar" :disabled="!cronometroRodando">
 			<span class="icon">
 				<i class="fas fa-stop"></i>
 			</span>
 			<span>stop</span>
-		</button>
+		</button> -->
 	</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import CronometroTarefa from "./CronometroTarefa.vue";
+import ButtonDefault from "./ButtonDefault.vue";
 
 export default defineComponent({
 	name: "TemporizadorTarefa",
 	emits: ['aoTemporizadorFinalizado'],
-	components: { CronometroTarefa },
+	components: { CronometroTarefa, ButtonDefault },
 	data() {
 		return {
 			tempoEmSegundos: 0,

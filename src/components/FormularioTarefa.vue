@@ -2,11 +2,8 @@
 	<div class="box">
 		<div class="columns">
 			<div class="column is-8" role="form" aria-label="Formulário para a criaação de uma nova tarefa">
-				<input 
-				type="text" 
-				class="input" 
-				placeholder="Qual tarefa você deseja iniciar?"
-				v-model="descricaoDaTarefa">
+				<input type="text" class="input" placeholder="Qual tarefa você deseja iniciar?"
+					v-model="descricaoDaTarefa">
 			</div>
 			<div class="column">
 				<TemporizadorTarefa @aoTemporizadorFinalizado="finalizarTarefa" />
