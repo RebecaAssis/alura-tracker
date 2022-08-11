@@ -3,18 +3,6 @@
 		<CronometroTarefa :tempoEmSegundos="tempoEmSegundos" />
 		<ButtonDefault @clicado="iniciar" icone="fas fa-play" texto="play" :desabilitado="cronometroRodando"/>
 		<ButtonDefault @clicado="finalizar" icone="fas fa-stop" texto="stop" :desabilitado="!cronometroRodando" />
-		<!-- <button class="button" @click="iniciar" :disabled="cronometroRodando">
-			<span class="icon">
-				<i class="fas fa-play"></i>
-			</span>
-			<span>play</span>
-		</button> -->
-		<!-- <button class="button" @click="finalizar" :disabled="!cronometroRodando">
-			<span class="icon">
-				<i class="fas fa-stop"></i>
-			</span>
-			<span>stop</span>
-		</button> -->
 	</div>
 </template>
 
