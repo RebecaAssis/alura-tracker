@@ -4,7 +4,7 @@
       <BarraLateral @aoTemaAlterado="trocarTema" />
     </div>
     <div class="column is-three-quarter conteudo">
-      
+      <router-view></router-view>
     </div>
   </main>
 </template>
@@ -12,7 +12,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import BarraLateral from './components/BarraLateral.vue';
-import TaskInterface from './interfaces/TaskInterface' 
 
 export default defineComponent({
   name: "App",
